@@ -5,12 +5,15 @@ const DetailDisplay = ({ title, data }) => {
   return (
     <div className="mb-6">
       <h2 className="text-xl font-semibold my-3 ">{title}</h2>
-      <div className="flex gap-5">
+      <div className="flex flex-wrap gap-5">
         {data?.map((item) =>
           item.logo_path ? (
-            <div key={item.id} className="bg-white py-1 px-2 rounded-md flex items-center justify-center">
+            <div
+              key={item.id}
+              className="bg-white py-1 px-2 rounded-md flex items-center justify-center "
+            >
               <img
-                className="w-[100px] h-[40px] object-contain"
+                className="min-w-[100px] max-h-[40px]  object-contain "
                 src={baseImgUrl + item.logo_path}
                 alt=""
               />
