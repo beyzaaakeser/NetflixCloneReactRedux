@@ -6,6 +6,7 @@ import '@splidejs/react-splide/css/skyblue';
 import '@splidejs/react-splide/css/sea-green';
 import '@splidejs/react-splide/css/core';
 import { baseImgUrl } from '../constants';
+import { Link } from 'react-router-dom';
 
 const MovieList = ({ genre }) => {
   const [movies, setMovies] = useState([]);
@@ -23,23 +24,26 @@ const MovieList = ({ genre }) => {
       .then((res) => setMovies(res.data.results))
       .catch((err) => console.error(err));
   }, []);
-  console.log(movies);
   return (
     <div className="my-10">
       {<h1 className="text-3xl font-semibold mb-3 ">{genre.name}</h1>}
 
-      <Splide options={{
-        pagination:false,
-        autoWidth:true,
-        gap:"15px",
-      }}>
+      <Splide
+        options={{
+          pagination: false,
+          autoWidth: true,
+          gap: '15px',
+        }}
+      >
         {movies.map((movie) => (
           <SplideSlide key={movie.id}>
-            <img
-              src={baseImgUrl + movie.poster_path}
-              className="max-w-[300px] h-full cursor-pointer rounded"
-              alt="Image 1"
-            />
+            <Link to={`/movie/${movie.id}`}>
+              <img
+                src={baseImgUrl + movie.poster_path}
+                className="max-w-[300px] h-full cursor-pointer rounded"
+                alt="Image 1"
+              />
+            </Link>
           </SplideSlide>
         ))}
       </Splide>
