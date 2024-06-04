@@ -26,7 +26,7 @@ const MovieList = ({ genre }) => {
   }, []);
   return (
     <div className="my-10">
-      {<h1 className="text-3xl font-semibold mb-3 ">{genre.name}</h1>}
+      {<h1 className="text-3xl font-semibold italic m-3 ">{genre.name}</h1>}
 
       <Splide
         options={{
@@ -40,7 +40,7 @@ const MovieList = ({ genre }) => {
             <Link to={`/movie/${movie.id}`}>
               <img
                 src={baseImgUrl + movie.poster_path}
-                className="max-w-[300px] h-full cursor-pointer rounded"
+                className="max-w-[230px] h-full cursor-pointer rounded"
                 alt="Image 1"
               />
             </Link>
