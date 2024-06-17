@@ -15,19 +15,19 @@ I designed a brand new Netflix-like platform for movie lovers! Browse through ou
 - Redux-thunk
 - Millify
 
-<h5>GIF</h5>
+<h4>GIF</h5>
 
 ![](/public/netflix-platform-gif.gif)
 
-<h5>IMAGES</h5>
+<h4>IMAGES</h4>
 
-<h4>Main Page</h4>
+<h5>Main Page</h5>
 
 ![](/public/public/main.png)
 
 ![](/public/main2.png)
 
-<h4>Movie Detail Page</h4>
+<h5>Movie Detail Page</h5>
 
 ![](/public/movie-detail.png)
 
